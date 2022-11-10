@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*
+
+	Paleta
+
+	#70a288 = Polished Pine
+	#7692FF = Cornflower Blue
+	#DAB785 = Burlwood
+	#3D518C = Y In Mn Blue
+	#D5896F = Copper Crayola
+
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--font-principal: 'Roboto', sans-serif; /* Tem regular e bold pra weight */
+
+	--cor1: #70a288;
+	--cor2: #7692FF;
+	--cor3: #DAB785;
+	--cor4: #3D518C;
+	--cor5: #D5896F;
+
+}
+
+header{
+	font-family: var(--font-principal);
+	background-color: var(--cor1);
+	padding: 2%;
+	text-align: center;
+}
+
+body{
+	background-color: var(--cor3);
+}
+
+main{
+	background-color: white;
+	width: 80%;
+	margin: auto;
+	margin-top: 2%;
+	padding: 5%;
+	font-family: var(--font-principal);
+	border-radius: 30px;
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.180);
+}
+
+.form__{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form__ label{
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.form__ input{
+	width: 50%;
+	height: 2.5rem;
+	padding: 1%;
+	font-size: 18px;
+	text-align: center;
+	margin: 4% 0;
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	box-shadow: 2px 3px 3px 3px var(--cor2);
+	animation-name: entradaAnima;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes entradaAnima{
+	50%{
+		box-shadow: 3px 4px 4px 4px var(--cor2);
+	}
+}
+
+.form__ button{
+	padding: 2%;
+	align-self: flex-end;
+	outline: none;
+	border: none;
+	background-color: var(--cor4);
+	color: white;
+	font-weight: 500;
+	font-size: 15px;
+	border-radius: 30px;
+	width: 100px;
+	cursor: pointer;
+	transition: .4s ease-in-out;
+}
+
+.form__ button:hover{
+	background-color: white;
+	border: 2px solid var(--cor4);
+	color: black;
+}
+
+#res__{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 2% 0;
+}
+
+#res__ p{
+	margin: 2% 0;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+}
+
+#res__ img{
+	border-radius: 50%;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.180);
+}
