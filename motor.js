@@ -10,10 +10,10 @@
 function calculaIMC(){
 	const altura = document.getElementById("altura").value;
 	const peso = document.getElementById("peso").value; 
-	const result = document.getElementById("res__");
+	let result = document.getElementById("res__");
 	const botaoResetar = document.getElementById("resetar");
-	const imagemIMC = document.createElement("img");
-	imagemIMC.width = "350";
+	let imagemIMC = document.createElement("img");
+	imagemIMC.setAttribute("class","res__img");
 
 		if(!altura || !peso){
 			alert("Preencha os Campos corretamente");

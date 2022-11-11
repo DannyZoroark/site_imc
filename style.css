@@ -65,10 +65,10 @@ main{
 	font-size: 20px;
 }
 
-.form__ input{
-	width: 50%;
+.form__ .form__campo{
+	width: 800px;
 	height: 2.5rem;
-	padding: 1%;
+	padding: 2%;
 	font-size: 18px;
 	text-align: center;
 	margin: 4% 0;
@@ -77,20 +77,36 @@ main{
 	border-radius: 30px;
 	box-shadow: 2px 3px 3px 3px var(--cor2);
 	animation-name: entradaAnima;
-	animation-duration: 1s;
+	animation-duration: 3s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
+	transition: .8s;
 }
 
+.form__campo:hover{
+	background-color: rgba(0, 0, 0, 0.250);
+}
+
+
 @keyframes entradaAnima{
-	50%{
+	20%{
 		box-shadow: 3px 4px 4px 4px var(--cor2);
+	}
+	60%{
+		box-shadow: 3px 4px 4px 4px var(--cor4);
 	}
 }
 
-.form__ button{
+.botoes__{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: flex-end;
+	margin-top: 2rem;
+}
+
+.botoes__ button{
 	padding: 2%;
-	align-self: flex-end;
 	outline: none;
 	border: none;
 	background-color: var(--cor4);
@@ -99,11 +115,13 @@ main{
 	font-size: 15px;
 	border-radius: 30px;
 	width: 100px;
+	height: 60px;
 	cursor: pointer;
 	transition: .4s ease-in-out;
+	margin-left: 12px;
 }
 
-.form__ button:hover{
+.botoes__ button:hover{
 	background-color: white;
 	border: 2px solid var(--cor4);
 	color: black;
@@ -124,7 +142,9 @@ main{
 	text-align: center;
 }
 
-#res__ img{
+#res__ .res__img{
 	border-radius: 50%;
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.180);
+	width: 400px;
+	height: 400px;
 }
